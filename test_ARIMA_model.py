@@ -34,8 +34,8 @@ plt.legend()
 plt.show()
 
 # Define ARIMA model
-# For test, assume p=2, d=2, q=2
-p, d, q = 2, 2, 2
+
+p, d, q = 4, 3, 1
 model = ARIMA(ts, order=(p, d, q))
 
 # Fit the model
@@ -57,6 +57,7 @@ plt.figure(figsize=(12, 6))
 plt.plot(ts, label='Original Time Series')
 plt.plot(forecast_date_rng, forecast_values, label='Forecast')
 plt.fill_between(forecast_date_rng, ci.iloc[:, 0], ci.iloc[:, 1], color='gray', alpha=0.3, label='Confidence Interval')
-plt.title('ARIMA Forecasting')
+plt.title(f'ARIMA Forecasting_{p}_{d}_{q}')
 plt.legend()
+plt.savefig(f'arima_para_{p}_{d}_{q}.pdf')
 plt.show()
