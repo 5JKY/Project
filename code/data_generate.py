@@ -27,7 +27,7 @@ exchange_rates = exchange_rate_orign_df[['日期','中行钞卖价/汇卖价', '
 exchange_rates.set_index(exchange_rates['date'], inplace=True)
 
 # Only care about bank selling exchange rates
-selling_rates = exchange_rates['bank_buying_exchange_rate']
+selling_rates = exchange_rates['bank_selling_exchange_rate']
 
 # Convert the index to Timestamp for further manipulating
 selling_rates.index = pd.to_datetime(selling_rates.index)
