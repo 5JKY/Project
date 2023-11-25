@@ -45,7 +45,7 @@ plt.show()
 
 
 # Display a histogram for 2023, which only records exchange rates data before 2023-11-01
-seaborn.histplot(selling_rates['2023-01-01':'2023-11-1'], bins=70, kde=True)
+seaborn.histplot(selling_rates['2023-01-01':], bins=70, kde=True)
 plt.title('Histogram with KDE for 2023 before November')
 plt.xlabel('Exchange Rates')
 plt.ylabel('Frequency')
