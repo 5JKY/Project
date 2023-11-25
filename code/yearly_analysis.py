@@ -22,8 +22,8 @@ plt.xlabel('Year')
 plt.ylabel('Exchange Rate')
 # Show and save figure
 plt.legend()
-plt.show()
 plt.savefig('graphs/yearly_analysis.pdf')
+plt.show()
 
 
 # Calculate the mean value per year
@@ -44,5 +44,5 @@ plt.xlabel('Date')
 plt.ylabel('Exchange Rate')
 # Show and save figure
 plt.legend()
-plt.show()
 plt.savefig('graphs/daily_rates_with_yearly_mean.pdf')
+plt.show()

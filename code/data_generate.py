@@ -40,5 +40,6 @@ plt.title("CAD/CNY exchange rate trends from 2019 to 2023")
 plt.xlabel('Date')
 plt.ylabel('Bank Selling Exchange Rate')
 plt.legend()
-plt.show()
 plt.savefig('graphs/forex_trading_rates.pdf')
+plt.show()
+
