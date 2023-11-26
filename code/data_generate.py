@@ -35,14 +35,20 @@ selling_rates.index = pd.to_datetime(selling_rates.index)
 
 # Won't be executed when the script being imported.
 if __name__ == '__main__':
+    exchange_rates.plot(title="CAD/CNY Exchange Rates Trend from 2019 to 2023")
+    plt.savefig('graphs/forex_trading_rates.pdf')
+    plt.xlabel('Date')
+    plt.ylabel('Exchange Rate')
+    plt.show()
+
     selling_rates.plot(alpha=0.3, style='-', label = 'Every Forex Trading Day-orignal data plot')
     selling_rates.asfreq('BMS').plot(style='--', label='Sample the Start of Each Month')
     selling_rates.asfreq('BYS').plot(style='--', label='Sample the Start of Each Year')
 
-    plt.title("CAD/CNY exchange rate trends from 2019 to 2023")
+    plt.title("CAD/CNY Bank Selling Exchange Rate Trend from 2019 to 2023")
     plt.xlabel('Date')
-    plt.ylabel('Bank Selling Exchange Rate')
+    plt.ylabel('Exchange Rate')
     plt.legend()
-    plt.savefig('graphs/forex_trading_rates.pdf')
+    plt.savefig('graphs/selling_rates.pdf')
     plt.show()
 
