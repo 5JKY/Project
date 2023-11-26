@@ -40,7 +40,7 @@ min_quarterly.plot(style='g:', label='Minimum Value of Each Quarter', marker="v"
 # Customize the plot
 plt.title('Quarterly Mean and Extreme Value Trend')
 plt.xlabel('Date')
-plt.ylabel('Exchange Rate')
+plt.ylabel('Exchange Rate (CNY/100CAD)')
 plt.legend()
 plt.savefig('graphs/distribution_quaterly.pdf')
 plt.show()
@@ -60,7 +60,7 @@ min_monthly.plot(style='g:', label='Minimum Value of Each Month', marker='v', ma
 # Customize the plot
 plt.title('Monthly Mean and Extreme Value Trend')
 plt.xlabel('Date')
-plt.ylabel('Exchange Rate')
+plt.ylabel('Exchange Rate (CNY/100CAD)')
 plt.legend()
 plt.savefig('graphs/distribution_monthly.pdf')
 plt.show()

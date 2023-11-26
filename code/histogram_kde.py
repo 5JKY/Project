@@ -13,7 +13,7 @@ mpl.rcParams.update({
 # Display a histogram for a more detailed view of the data distribution in about 5 years range
 seaborn.histplot(selling_rates, bins=70, kde=True)
 plt.title('Histogram with KDE for overall time series')
-plt.xlabel('Exchange Rates')
+plt.xlabel('Exchange Rates (CNY/100CAD)')
 plt.ylabel('Frequency')
 plt.savefig('graphs/overall_hist.pdf')
 plt.show()
@@ -36,7 +36,7 @@ for i, year in enumerate(years):
     ax = axes[i // 2, i % 2]
     seaborn.histplot(interval_data, kde=True, bins=70, ax=ax)
     ax.set_title(f'Histogram and KDE for {year}')
-    ax.set_xlabel('Exchange Rates')
+    ax.set_xlabel('Exchange Rates (CNY/100CAD)')
     ax.set_ylabel('Frequency')
   
 plt.tight_layout()
@@ -47,7 +47,7 @@ plt.show()
 # Display a histogram for 2023, which only records exchange rates data before 2023-11-01
 seaborn.histplot(selling_rates['2023-01-01':], bins=70, kde=True)
 plt.title('Histogram with KDE for 2023 before November')
-plt.xlabel('Exchange Rates')
+plt.xlabel('Exchange Rates (CNY/100CAD)')
 plt.ylabel('Frequency')
 plt.savefig('graphs/ten_months_hist2023.pdf')
 plt.show()

@@ -19,7 +19,7 @@ selling_rates.resample('BA').min().plot(style=':', label='minumum value of each 
 # Set title and labels 
 plt.title('Yearly Analysis of Forex Trading Rates')
 plt.xlabel('Year')
-plt.ylabel('Exchange Rate')
+plt.ylabel('Exchange Rate (CNY/100CAD)')
 # Show and save figure
 plt.legend()
 plt.savefig('graphs/yearly_analysis.pdf')
@@ -41,7 +41,7 @@ for (date, mean_value), color in zip(mean_per_year.items(), colors):
 # Set title and labels
 plt.title('Daily Exchange Rates with Mean Value per Year')
 plt.xlabel('Date')
-plt.ylabel('Exchange Rate')
+plt.ylabel('Exchange Rate (CNY/100CAD)')
 # Show and save figure
 plt.legend()
 plt.savefig('graphs/daily_rates_with_yearly_mean.pdf')

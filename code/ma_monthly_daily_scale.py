@@ -17,7 +17,7 @@ selling_rates.resample('BMS').mean().plot(alpha=0.3, style='-', label = 'Monthly
 
 plt.title('Monthly Mean Exchange Rate with Yearly Moving Average Overlay')
 plt.xlabel('Date')
-plt.ylabel('Exchange Rate')
+plt.ylabel('Exchange Rate (CNY/100CAD)')
 plt.legend()
 plt.savefig('graphs/yearly_MA.pdf')
 plt.show()
@@ -31,7 +31,7 @@ selling_rates.plot(alpha=0.3, style='-', label = 'Daily Exchange Rate-orignal da
 
 plt.title('Daily Exchange Rate with Quarterly Moving Average Overlay')
 plt.xlabel('Date')
-plt.ylabel('Exchange Rate')
+plt.ylabel('Exchange Rate (CNY/100CAD)')
 plt.legend()
 plt.savefig('graphs/quarterly_MA.pdf')
 plt.show()
