@@ -17,7 +17,7 @@ selling_rates.resample('BAS').std().plot(style='-', label='Yearly', marker='o')
 
 plt.title('Standard Deviations at Different Time Scales')
 plt.xlabel('date')
-plt.ylabel('Standard Deviation')
+plt.ylabel('Standard Deviation (CNY/100CAD)')
 plt.legend()
 plt.savefig('graphs/std_scales.pdf')
 plt.show()
